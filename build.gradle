@@ -23,7 +23,19 @@ repositories {
 }
 
 dependencies {
-    compile group: 'org.apache.poi'
+    // https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.9'
+
+    // https://mvnrepository.com/artifact/poi/poi
+    compile group: 'poi', name: 'poi', version: '3.1-FINAL'
+    
+    // https://mvnrepository.com/artifact/org.apache.poi/poi-scratchpad
+    compile group: 'org.apache.poi', name: 'poi-scratchpad', version: '3.2-FINAL'
+
+    
+    // https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '4.0.0'
+
 
     // This dependency is found on compile classpath of this component and consumers.
     implementation 'com.google.guava:guava:27.0.1-jre'
@@ -33,4 +45,4 @@ dependencies {
 }
 
 // Define the main class for the application
-mainClassName = 'timetracker.App'
+mainClassName = 'timetracker.ExcelWriter'
